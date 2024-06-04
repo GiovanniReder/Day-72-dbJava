@@ -19,13 +19,18 @@ public class Application {
         Evento evento4= new Evento("presentazione sony", 2027 ,"presentiamo la nuova playstation", tipoEventoType.PRIVATO, 3000);
 
       //  evdao.save(evento1);
-       // evdao.save(evento2);
+      //  evdao.save(evento2);
       //  evdao.save(evento3);
         System.out.println("fin qui tutto ok");
      //  evdao.save(evento4);
 
-        System.out.println( evdao.getById(1));
-        System.out.println( evdao.deleteById(4) );
+        System.out.println( evdao.getById(53));
+       // evdao.deleteById(2);
+      //  evdao.deleteById(3);
+     //   evdao.deleteById(4);
+     //  System.out.println( evdao.deleteById(52) );
+     //  System.out.println( evdao.deleteById(3) );
+    //   System.out.println( evdao.deleteById(4) );
 
         em.close();
         emf.close();
