@@ -35,20 +35,21 @@ public Evento getById (long eventId) {
        return selectedEvent;
     }
 
-    public Evento deleteById (long eventId){
+    public Evento deleteById (long eventId) {
 
-       Evento eventoDaCancellare= this.getById(eventId);
+        Evento eventoDaCancellare = this.getById(eventId);
 
-       EntityTransaction transizione = em.getTransaction();
+        EntityTransaction transizione = em.getTransaction();
 
-       transizione.begin();
+        transizione.begin();
 
-       em.remove(eventoDaCancellare);
+        em.remove(eventoDaCancellare);
 
-       transizione.commit();
+        transizione.commit();
 
         System.out.println("L'evento chiamato: " + eventoDaCancellare.getTitolo() + " è stato cancellato dal db");
 
 
-
-}
+        return eventoDaCancellare;
+    }
+    }
